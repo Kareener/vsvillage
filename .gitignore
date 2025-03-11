@@ -2,3 +2,7 @@ lib
 obj
 bin
 vsvillage.sln
+/resources/assets/vsvillage/shapes/bed-inventory.json
+/resources/assets/vsvillage/shapes/villager_testing_animations.json
+/resources/assets/vsvillage/blocktypes/bed_ground.json
+/resources/assets/vsvillage/entities/villager - Copy.json
