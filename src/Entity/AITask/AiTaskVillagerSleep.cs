@@ -57,7 +57,7 @@ namespace VsVillage
             if (lastCheck + 10000 < entity.World.ElapsedMilliseconds)
             {
                 lastCheck = entity.World.ElapsedMilliseconds;
-                retrieveBed();
+                RetrieveBed();
                 return bedEntity != null && IntervalUtil.matchesCurrentTime(duringDayTimeFrames, entity.World);
             }
             else
@@ -73,8 +73,8 @@ namespace VsVillage
             bedReached = false;
             if (bedEntity != null)
             {
-                pathTraverser.NavigateTo(bedEntity.Pos.ToVec3d(), moveSpeed, 0.5f, tryGoingToBed, tryGoingToBed, null, true, 999, 0, null);
-                tryGoingToBed();
+                pathTraverser.NavigateTo(bedEntity.Pos.ToVec3d(), moveSpeed, 0.5f, TryGoingToBed, TryGoingToBed, null, true, 999, 0, null);
+                TryGoingToBed();
             }
         }
         public override bool ContinueExecute(float dt)
@@ -82,7 +82,7 @@ namespace VsVillage
             if (lastCheck + 500 < entity.World.ElapsedMilliseconds && !bedReached)
             {
                 lastCheck = entity.World.ElapsedMilliseconds;
-                tryGoingToBed();
+                TryGoingToBed();
             }
             return IntervalUtil.matchesCurrentTime(duringDayTimeFrames, entity.World) && (bedReached || pathTraverser.Active);
         }
@@ -94,7 +94,7 @@ namespace VsVillage
             entity.AnimManager.StopAnimation(sleepAnimMeta.Code);
         }
 
-        private void tryGoingToBed()
+        private void TryGoingToBed()
         {
             if (bedEntity != null && entity.ServerPos.SquareDistanceTo(bedEntity.Pos.ToVec3d()) < 3)
             {
@@ -107,7 +107,7 @@ namespace VsVillage
             }
         }
 
-        private void retrieveBed()
+        private void RetrieveBed()
         {
             bedEntity = null;
             var blockAccessor = entity.World.BlockAccessor;

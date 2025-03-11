@@ -153,9 +153,9 @@
 				"animationSpeed": 2,
 				"blendMode": "AddAverage"
 			},
-            { "code": "rowdywelcome", "animation": "rowdywelcome", "blendMode": "AddAverage" },
-            { "code": "lazywelcome", "animation": "lazywelcome", "blendMode": "AddAverage" },
-            { "code": "lazynod", "animation": "lazynod", "blendMode": "AddAverage" }
+            { "code": "rowdy-welcome", "animation": "rowdy-welcome", "blendMode": "AddAverage" },
+            { "code": "lazy-welcome", "animation": "lazy-welcome", "blendMode": "AddAverage" },
+            { "code": "lazy-nod", "animation": "lazy-nod", "blendMode": "AddAverage" }
 		]
 	},
 	"server": {
@@ -222,7 +222,7 @@
 						"seekingRange": 12,
 						"minRangeByType": { "*-archer": 8, "*": 0 },
 						"movespeed": 0.035,
-						"animation": "RowdyRun",
+						"animation": "Rowdy-Run",
 						"animationSpeed": 1.75
 					},
 					{
@@ -234,7 +234,7 @@
 						"priority": 1.5,
 						"movespeed": 0.035,
 						"seekingRange": 4,
-						"animationByType": { "*-archer": "BalancedRun", "*-soldier": "BalancedRun", "*": "FormalRun" },
+						"animationByType": { "*-archer": "Balanced-Run", "*-soldier": "Balanced-Run", "*": "Formal-Run" },
 						"animationSpeed": 1.75
 					},
 					{
@@ -314,7 +314,7 @@
 						"mincooldownByType": {"*-herbalist": 10000, "*": 60000},
 						"maxcooldownByType": {"*-herbalist": 20000, "*": 120000},
 						"maxdistanceByType": { "@.*-(soldier|archer)": 5, "*-herbalist": 25, "*": 10 },
-						"animationByType": { "*-shepherd": "walk", "*-farmer": "walk", "*-herbalist": "walk", "@.*-(soldier|archer)": "BalancedRun", "*": "hammerflip" },
+						"animationByType": { "*-shepherd": "walk", "*-farmer": "walk", "*-herbalist": "walk", "@.*-(soldier|archer)": "Balanced-Run", "*": "hammerflip" },
 						"animationSpeedByType": { "@.*-(soldier|archer)": 1.75, "*": 1 },
 						"priorityByType": { "@.*-(soldier|archer)": 1.5, "*": 1.4 },
 						"movespeedByType": { "@.*-(soldier|archer)": 0.035, "*": 0.01 }

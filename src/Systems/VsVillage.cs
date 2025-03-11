@@ -38,9 +38,9 @@ namespace VsVillage
             AiTaskRegistry.Register<AiTaskVillagerSocialize>("villagersocialize");
             AiTaskRegistry.Register<AiTaskVillagerGotoWork>("villagergotowork");
             AiTaskRegistry.Register<AiTaskVillagerGotoGatherspot>("villagergotogather");
-            AiTaskRegistry.Register<AiTraskVillagerFillTrough>("villagerfilltrough");
-            AiTaskRegistry.Register<AiTraskVillagerCultivateCrops>("villagercultivatecrops");
-            AiTaskRegistry.Register<AiTraskVillagerFlipWeapon>("villagerflipweapon");
+            AiTaskRegistry.Register<AiTaskVillagerFillTrough>("villagerfilltrough");
+            AiTaskRegistry.Register<AiTaskVillagerCultivateCrops>("villagercultivatecrops");
+            AiTaskRegistry.Register<AiTaskVillagerFlipWeapon>("villagerflipweapon");
             AiTaskRegistry.Register<AiTaskStayCloseToEmployer>("villagerstayclose");
             AiTaskRegistry.Register<AiTaskHealWounded>("villagerhealwounded");
             AiTaskRegistry.Register<AiTaskVillagerRangedAttack>("villagerrangedattack");

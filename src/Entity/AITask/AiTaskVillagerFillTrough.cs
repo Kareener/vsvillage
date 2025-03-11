@@ -5,11 +5,11 @@ using Vintagestory.GameContent;
 
 namespace VsVillage
 {
-    public class AiTraskVillagerFillTrough : AiTaskGotoAndInteract
+    public class AiTaskVillagerFillTrough : AiTaskGotoAndInteract
     {
         BlockEntityTrough nearestTrough;
 
-        public AiTraskVillagerFillTrough(EntityAgent entity) : base(entity)
+        public AiTaskVillagerFillTrough(EntityAgent entity) : base(entity)
         {
         }
 

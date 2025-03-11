@@ -5,17 +5,17 @@ using Vintagestory.GameContent;
 
 namespace VsVillage
 {
-    public class AiTraskVillagerCultivateCrops : AiTaskGotoAndInteract
+    public class AiTaskVillagerCultivateCrops : AiTaskGotoAndInteract
     {
         BlockEntityFarmland nearestFarmland;
 
-        public AiTraskVillagerCultivateCrops(EntityAgent entity) : base(entity)
+        public AiTaskVillagerCultivateCrops(EntityAgent entity) : base(entity)
         {
         }
 
         protected override Vec3d GetTargetPos()
         {
-            nearestFarmland = entity.Api.ModLoader.GetModSystem<POIRegistry>().GetNearestPoi(entity.ServerPos.XYZ, maxDistance, isValidFarmland) as BlockEntityFarmland;
+            nearestFarmland = entity.Api.ModLoader.GetModSystem<POIRegistry>().GetNearestPoi(entity.ServerPos.XYZ, maxDistance, IsValidFarmland) as BlockEntityFarmland;
             return nearestFarmland?.Position;
         }
 
@@ -44,7 +44,7 @@ namespace VsVillage
             }
         }
 
-        private bool isValidFarmland(IPointOfInterest poi)
+        private bool IsValidFarmland(IPointOfInterest poi)
         {
             var farmland = poi as BlockEntityFarmland;
             return farmland != null && farmland.HasUnripeCrop() && entity.World.Rand.NextDouble() < 0.2;

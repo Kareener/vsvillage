@@ -4,11 +4,11 @@ using Vintagestory.GameContent;
 
 namespace VsVillage
 {
-    public class AiTraskVillagerFlipWeapon : AiTaskIdle
+    public class AiTaskVillagerFlipWeapon : AiTaskIdle
     {
         private string weapon;
 
-        public AiTraskVillagerFlipWeapon(EntityAgent entity) : base(entity)
+        public AiTaskVillagerFlipWeapon(EntityAgent entity) : base(entity)
         {
         }
 
